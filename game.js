@@ -29,9 +29,11 @@ function switchSymbol() {
 
     else if (document.symbol == 'X') {
         document.symbol = 'O';
+        setMessage(document.symbol+' turn');
     }
     else {
         document.symbol = 'X';
+        setMessage(document.symbol+' turn');
     }
 }
 
