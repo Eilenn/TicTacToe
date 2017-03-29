@@ -1,5 +1,5 @@
 function startGame() {
-    document.symbol = 'X';
+    document.symbol = getStartingSymbol(circle);
     winner = false;
     moveCounter = 0;
     clearBoard();
@@ -10,7 +10,7 @@ function nextMove(cell) {
         cell.innerText = document.symbol;
         switchSymbol();
         moveCounter++;
-        if (isDraw(moveCounter)) {
+        if (isDraw(moveCounter)&& winner == false) {
             alert('Game over. It is a tie.');
         }
     }
@@ -40,4 +40,8 @@ function switchSymbol() {
 
 function setMessage(msg) {
     document.getElementById('msg').innerText = msg;
+}
+
+function getStartingSymbol(symbol){
+    return symbol;
 }
