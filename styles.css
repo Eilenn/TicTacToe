@@ -29,6 +29,7 @@ table{
     font-size: 45pt;
     border: 1px solid black;
     text-align: center;
+    
 }
 
   table.center {
@@ -42,6 +43,7 @@ table{
     border: 1px solid black;
     font-size: 45pt;
     text-align: center;
+    color: #008080;
 }
 
 .reset{
@@ -56,4 +58,8 @@ table{
     margin-right:auto;
     text-align: center;
     font-size: 15pt;
+}
+
+a{
+    color:#008080;
 }
