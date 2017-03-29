@@ -2,7 +2,7 @@ function startGame() {
     document.symbol = 'X';
     winner = false;
     moveCounter = 0;
-
+    clearBoard();
 }
 
 function nextMove(cell) {
@@ -11,20 +11,20 @@ function nextMove(cell) {
         switchSymbol();
         moveCounter++;
         if (isDraw(moveCounter)) {
-            setMessage('Game over. It is a tie.');
+            alert('Game over. It is a tie.');
         }
     }
     else if (cell.innerText == '' && winner == true) {
-        setMessage('Game is over, you cannot place symbol on board.');
+        alert("Game over,  you cannot place symbol on board.");
     }
     else {
-        setMessage('This field is occupied. Pick another.');
+        alert('This field is occupied. Pick another.');
     }
 }
 
 function switchSymbol() {
     if (isWon(document.symbol)) {
-        setMessage(document.symbol + ', you won!');
+        alert(document.symbol + ', you won!');
         winner = true;
     }
 

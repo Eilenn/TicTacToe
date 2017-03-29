@@ -1,14 +1,13 @@
 <html>
 
 <head>
-    <title>Tic Tac Toe Game  </title>
+    <title>Tic Tac Toe Game</title>
     <link rel="stylesheet" href="styles.css">
-    
 </head>
 
 <body onload="startGame()">
     <h1>Tic Tac Toe Game</h1>
-    <div id="msg"> Message</div>
+    <div id="msg"> </div>
     <table class="center">
         <tr>
             <td class="Cell" id="1" onclick="nextMove(this)"></td>
@@ -28,7 +27,9 @@
             <script src="game.js" ></script>
     <script src="winner-checker.js" ></script>
     <script src="reset.js"></script>
-    <a href="javascript: clearBoard();">Reset</a>
+    <div class="reset">
+    <a href="javascript: startGame();">New game</a>
+    </div>
 </body>
 
 </html>

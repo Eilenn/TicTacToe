@@ -43,3 +43,10 @@ table{
     font-size: 45pt;
     text-align: center;
 }
+
+.reset{
+        margin-left:auto; 
+    margin-right:auto;
+    text-align: center;
+    font-size: 15pt;
+}
