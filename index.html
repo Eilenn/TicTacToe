@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body onload="startGame()">
+<body onload="startGame(cross)">
     <h1>Tic Tac Toe Game</h1>
     <div id="msg"> </div>
     <table class="center">
@@ -29,7 +29,11 @@
     <script src="reset.js"></script>
     <script src="startingSymbol.js"></script>
     <div class="reset">
-    <a href="javascript: startGame();">New game</a>
+    <a href="javascript: clearBoard();">New game</a>
+    </div>
+        <div class="startSymbol">
+    <a href="javascript: startGame(circle);">New game with circle starting</a>
+    <a href="javascript: startGame(cross);">New game with cross starting</a>
     </div>
 </body>
 

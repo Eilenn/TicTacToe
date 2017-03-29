@@ -1,5 +1,12 @@
-function startGame() {
-    document.symbol = getStartingSymbol(circle);
+/*function startGame() {
+    document.symbol = getStartingSymbol(cross);
+    winner = false;
+    moveCounter = 0;
+    clearBoard();
+}*/
+
+function startGame(symbol) {
+    document.symbol = symbol;
     winner = false;
     moveCounter = 0;
     clearBoard();
@@ -42,6 +49,3 @@ function setMessage(msg) {
     document.getElementById('msg').innerText = msg;
 }
 
-function getStartingSymbol(symbol){
-    return symbol;
-}
