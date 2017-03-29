@@ -15,9 +15,13 @@ function startGame(symbol) {
 function nextMove(cell) {
     if (cell.innerText == '' && winner == false && moveCounter != 9) {
         cell.innerText = document.symbol;
+        if (cell.innerText == 'X') {
+            cell.style.color = "#191970";
+        }
+
         switchSymbol();
         moveCounter++;
-        if (isDraw(moveCounter)&& winner == false) {
+        if (isDraw(moveCounter) && winner == false) {
             alert('Game over. It is a tie.');
         }
     }

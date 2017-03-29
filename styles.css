@@ -43,7 +43,7 @@ table{
     border: 1px solid black;
     font-size: 45pt;
     text-align: center;
-    color: #008080;
+    color: red;
 }
 
 .reset{
@@ -61,5 +61,5 @@ table{
 }
 
 a{
-    color:#008080;
+    color:#191970;
 }
