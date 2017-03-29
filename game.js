@@ -9,7 +9,7 @@ function nextMove(cell) {
         cell.innerText = document.symbol;
         switchSymbol();
         moveCounter++;
-        if (moveCounter == 9) {
+        if (isDraw(moveCounter)) {
             setMessage('Game over. It is a tie.');
         }
     }

@@ -26,17 +26,3 @@ function isDraw(moveCounter){
     }
         return draw;
 }
-
-function anotherIsDraw(){
-    var draw = false;
-    var counter=0;
-    for(var i=1; i<10;i++){
-        if(getSymbol(i)!=''){
-            counter++;
-        }
-    }
-    if(counter==9){
-        draw=true;
-    }
-    return draw;
-}
