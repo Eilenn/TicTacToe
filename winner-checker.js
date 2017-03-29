@@ -12,17 +12,17 @@ function checkRow(field1, field2, field3, symbol) {
     if (allTakenInRow) {
         isRowTaken = true;
     }
-        return isRowTaken;
+    return isRowTaken;
 }
 
 function getSymbol(fieldId) {
     return document.getElementById(fieldId).innerText;
 }
 
-function isDraw(moveCounter){
-    var draw=false;
-    if(moveCounter==9){
-       draw=true;
+function isDraw(moveCounter) {
+    var draw = false;
+    if (moveCounter == 9) {
+        draw = true;
     }
-        return draw;
+    return draw;
 }

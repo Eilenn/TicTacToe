@@ -2,6 +2,7 @@ function startGame() {
     document.symbol = 'X';
     winner = false;
     moveCounter = 0;
+
 }
 
 function nextMove(cell) {
@@ -29,11 +30,11 @@ function switchSymbol() {
 
     else if (document.symbol == 'X') {
         document.symbol = 'O';
-        setMessage(document.symbol+' turn');
+        setMessage(document.symbol + ' turn');
     }
     else {
         document.symbol = 'X';
-        setMessage(document.symbol+' turn');
+        setMessage(document.symbol + ' turn');
     }
 }
 
