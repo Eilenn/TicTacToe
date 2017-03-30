@@ -11,7 +11,7 @@ h1{
 .button {
     background-color: #B0C4DE; 
     border: none;
-    color: white;
+    color: #191970;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -47,14 +47,14 @@ table{
 }
 
 .reset{
-        margin-left:auto; 
+    margin-left:auto; 
     margin-right:auto;
     text-align: center;
     font-size: 15pt;
 }
 
 .startSymbol{
-        margin-left:auto; 
+    margin-left:auto; 
     margin-right:auto;
     text-align: center;
     font-size: 15pt;

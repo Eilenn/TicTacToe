@@ -18,6 +18,9 @@ function nextMove(cell) {
         if (cell.innerText == 'X') {
             cell.style.color = "#191970";
         }
+        if(cell.innerText=='O'){
+             cell.style.color="red";
+        }
 
         switchSymbol();
         moveCounter++;
@@ -29,7 +32,7 @@ function nextMove(cell) {
         alert("Game over,  you cannot place symbol on board.");
     }
     else {
-        alert('This field is occupied. Pick another.');
+       setMessage('This field is occupied. Pick another.');
     }
 }
 
