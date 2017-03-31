@@ -4,7 +4,7 @@ function startGame(symbol) {
     starting = symbol;
     winner = false;
     moveCounter = 0;
-    clearBoard();
+    clear.clearBoard();
 }
 
 function resetGame() {
