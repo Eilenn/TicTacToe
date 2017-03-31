@@ -7,6 +7,8 @@ var gameModule = (function () {
         winner = false;
         moveCounter = 0;
         clear.clearBoard();
+        size =3;
+       winnerChecker2.createBoard(size);
     }
     _resetGame = function () {
         _startGame(starting);
@@ -50,11 +52,13 @@ var gameModule = (function () {
                 cell.innerText = document.symbol;
                 if (checkSymbolModule.isX(cell)) {
                     cell.style.color = "#191970";
+                    board[cell.id-1]=1;
                 }
                 if (checkSymbolModule.isO(cell)) {
                     cell.style.color = "red";
+                    board[cell.id-1]=-1;
                 }
-
+                winnerChecker2.checkWinRow();
                 _switchSymbol();
                 moveCounter++;
                 if (winnerChecker.isDraw(moveCounter) && winner == false) {
