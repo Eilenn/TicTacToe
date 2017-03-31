@@ -26,21 +26,47 @@ h1{
     text-align: center;
 }
 #draw{
+    float: left;
     font-size: 18pt;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
 }
-.stats{
-        font-size: 18pt;
+#xWin{
+   float: left;
+   font-size: 18pt;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
 }
+#oWin{
+    float: left;
+    font-size: 18pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+#st1{
+    float: left;
+
+}
+
+#st2{
+    float: left;
+}
+#st3{
+    float: left;
+}
+.stats{
+    width: 200px;
+    font-size: 18pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+   
+}
+
 
 table{
     font-size: 45pt;
     border: 1px solid black;
-    text-align: center;
-    
+    text-align: center; 
 }
 
   table.center {
@@ -75,8 +101,4 @@ table{
     margin-right:auto;
     text-align: center;
     font-size: 15pt;
-}
-
-a{
-    color:#191970;
 }

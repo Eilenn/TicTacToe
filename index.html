@@ -6,22 +6,25 @@
 </head>
 
 <body onload="startGame(cross)">
-    <h1>Tic Tac Toe Game</h1>
-    <div id="msg"> </div>
-    <div class ="stats">Number of draws:
+    <div class="pageHeader">
+        <h1>Tic Tac Toe Game</h1>
+    </div>
+
+    <div class="numbers">
+        <div class="stats" id="st1">Number of draws: </div>
         <div id="draw">0</div>
-    </div>
-        <div class ="stats">Number of X wins:
-        <div id="xWin">0</div>
-    </div>
-        <div class ="stats">Number of O wins:
-        <div id="oWin">0</div>
-    </div>
-     
-    <div>
-        <div class="reset">
-            <button class="button" onclick="resetGame();">Reset game</button>
+        <div style="clear: both"> </div>
+        <div class="stats" id="st2">Number of X wins:
         </div>
+        <div id="xWin">0</div>
+        <div style="clear: both"> </div>
+        <div class="stats" id="st3">Number of O wins:
+        </div>
+        <div id="oWin">0</div>
+
+    </div>
+    <div id="msg">Turn</div>
+    <div>
         <table class="center">
             <tr>
                 <td class="Cell" id="1" onclick="nextMove(this)"></td>
@@ -29,26 +32,30 @@
                 <td class="Cell" id="3" onclick="nextMove(this)"></td>
             </tr>
             <tr>
-                <<td class="Cell" id="4" onclick="nextMove(this)"></td>
-                    <td class="Cell" id="5" onclick="nextMove(this)"></td>
-                    <td class="Cell" id="6" onclick="nextMove(this)"></td>
+                <td class="Cell" id="4" onclick="nextMove(this)"></td>
+                <td class="Cell" id="5" onclick="nextMove(this)"></td>
+                <td class="Cell" id="6" onclick="nextMove(this)"></td>
             </tr>
             <tr>
-                <<td class="Cell" id="7" onclick="nextMove(this)"></td>
-                    <td class="Cell" id="8" onclick="nextMove(this)"></td>
-                    <td class="Cell" id="9" onclick="nextMove(this)"></td>
+                <td class="Cell" id="7" onclick="nextMove(this)"></td>
+                <td class="Cell" id="8" onclick="nextMove(this)"></td>
+                <td class="Cell" id="9" onclick="nextMove(this)"></td>
             </tr>
         </table>
     </div>
-    <script src="game.js"></script>
-    <script src="winner-checker.js"></script>
-    <script src="clear.js"></script>
-    <script src="startingSymbol.js"></script>
-    <script src="history.js"></script>
+            <div class="reset">
+            <br/>
+            <button class="button" onclick="resetGame();">Reset game</button>
+        </div>
     <div class="startSymbol">
         <button class="button" onclick="startGame(circle);">Circle starts</button>
         <button class="button" onclick="startGame(cross);">Cross starts</button>
     </div>
+    <script src="game.js"></script>
+    <script src="winner-checker2.js"></script>
+    <script src="clear.js"></script>
+    <script src="startingSymbol.js"></script>
+    <script src="history.js"></script>
 </body>
 
 </html>

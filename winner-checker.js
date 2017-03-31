@@ -1,3 +1,5 @@
+
+
 function isWon(symbol) {
     var result = false;
     if (checkRow(1, 2, 3, symbol) || checkRow(4, 5, 6, symbol) || checkRow(7, 8, 9, symbol) || checkRow(1, 4, 7, symbol) || checkRow(2, 5, 8, symbol) || checkRow(3, 6, 9, symbol) || checkRow(1, 5, 9, symbol) || checkRow(3, 5, 7, symbol)) {

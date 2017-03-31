@@ -1,0 +1,66 @@
+
+body{
+background-image : url(' bi-background-frame.png ');
+background-attachment : fixed;
+background-size : 100% auto;
+}
+.blended_grid{
+display : block;
+width : 900px;
+overflow : auto;
+margin : 30px auto 0 auto;
+}
+.pageHeader{
+background-color : rgba(0, 0, 0, 0.5);
+float : left;
+clear : none;
+height : 200px;
+width : 900px;
+}
+.pageLeftMenu{
+background-color : rgba(0, 0, 0, 0.5);
+float : left;
+clear : none;
+height : 600px;
+width : 200px;
+}
+.pageContent{
+background-color : rgba(0, 0, 0, 0.5);
+float : left;
+clear : none;
+height : 600px;
+width : 700px;
+}
+.pageFooter{
+background-color : rgba(0, 0, 0, 0.5);
+float : left;
+clear : none;
+height : 100px;
+width : 900px;
+}
+
+table{
+    font-size: 45pt;
+    border: 1px solid black;
+    text-align: center; 
+}
+
+.Cell{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    font-size: 45pt;
+    text-align: center;
+    color: red;
+}
+.button {
+    background-color: #B0C4DE; 
+    border: none;
+    color: #191970;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+}

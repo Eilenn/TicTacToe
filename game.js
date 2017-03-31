@@ -23,7 +23,7 @@ function nextMove(cell) {
 
         switchSymbol();
         moveCounter++;
-        if (isDraw(moveCounter) && winner == false) {
+        if (winnerChecker.isDraw(moveCounter) && winner == false) {
             historyModule.wasDraw();
              setDraw(historyModule.getTimesWasDraw());
             alert('Game over. It is a tie.');
@@ -36,9 +36,8 @@ function nextMove(cell) {
         setMessage('This field is occupied. Pick another.');
     }
 }
-
 function switchSymbol() {
-    if (isWon(document.symbol)) {
+    if (winnerChecker.isWon(document.symbol)) {
         winner = true;
         if(isSymbolX()){
             historyModule.xWon();
