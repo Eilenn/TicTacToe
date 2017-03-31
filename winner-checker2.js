@@ -59,7 +59,7 @@ var winnerChecker2 = (function () {
                 for (var j = 0; j < size; j++) {
                     sum = sum + rows[i][j];
                 }
-                if (sum == 3 || sum == -3) {
+                if (sum == size || sum == -size) {
                     hasWon = true;
                     break;
                 }
@@ -73,7 +73,7 @@ var winnerChecker2 = (function () {
                 for (var j = 0; j < size; j++) {
                     sum = sum + columns[i][j];
                 }
-                if (sum == 3 || sum == -3) {
+                if (sum == size || sum == -size) {
                     hasWon = true;
                     break;
                 }
@@ -81,7 +81,18 @@ var winnerChecker2 = (function () {
             return hasWon;
         },
         _checkDiagonals = function () {
-
+            var hasWon = false;
+            for (var i = 0; i < 2; i++) {
+                var sum = 0;
+                for (var j = 0; j < size; j++) {
+                    sum = sum + diagonals[i][j];
+                }
+                if (sum == size || sum == -size) {
+                    hasWon = true;
+                    break;
+                }
+            }
+            return hasWon;
         },
         _checkWinRow = function () {
             _splitIntoRows();
@@ -89,6 +100,7 @@ var winnerChecker2 = (function () {
             _splitInDiagonals();
             _checkRows();
             _checkColumns();
+             _checkDiagonals();
         }
         ;
     return {
