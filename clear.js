@@ -1,3 +1,5 @@
+
+
 function clearBoard() {
     for (var i = 1; i < 10; i++) {
         clearField(i);
@@ -6,6 +8,6 @@ function clearBoard() {
     moveCounter = 0;
 }
 
-function clearField(fieldId) {
+var clearField =function(fieldId) {
     document.getElementById(fieldId).innerText = '';
 }

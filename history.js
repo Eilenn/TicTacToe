@@ -2,28 +2,34 @@
  * Pierwsze trzy metody powodują zwiększenie wygranej jednego z graczy (lub remisu) o jeden, a pozostałe metody pobierają liczbę wygranych
  */
 var historyModule = function(){
-var _xWon=0,
-_oWon=0,
-_draw=0;
-return{
-xWon: function(){
-    _xWon++;
+var _xWins=0,
+_oWins=0,
+_draws=0,
+_xWon= function(){
+    _xWins++;
 },
-oWon: function(){
-    _oWon++;
+_oWon=function(){
+ _oWins++;
 },
-wasDraw: function(){
-    _draw++;
+_wasDraw=function(){
+    _draws++;
 },
-getTimesXWon: function(){
-    return _xWon;
+_getTimesXWon=function(){
+    return _xWins;
 },
-getTimesOWon: function(){
-    return _oWon;
+_getTimesOWon= function(){
+    return _oWins;
 },
-getTimesWasDraw: function(){
-    return _draw;
-}
+_getTimesWasDraw= function(){
+    return _draws;
 };
+return{
+xWon: _xWon,
+oWon: _oWon,
+wasDraw: _wasDraw,
+getTimesXWon: _getTimesXWon,
+getTimesOWon: _getTimesOWon,
+getTimesWasDraw: _getTimesWasDraw
+}
 }();
 
