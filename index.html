@@ -10,7 +10,7 @@
         <h1>Tic Tac Toe Game</h1>
     </div>
 
-    <div class="numbers">
+    <div>
         <div class="stats" id="st1">Number of draws: </div>
         <div id="draw">0</div>
         <div style="clear: both"> </div>
@@ -21,10 +21,9 @@
         <div class="stats" id="st3">Number of O wins:
         </div>
         <div id="oWin">0</div>
-
     </div>
     <div id="msg">Turn</div>
-    <div>
+    <div class="container">
         <table class="center">
             <tr>
                 <td class="Cell" id="1" onclick="gameModule.nextMove(this)"></td>
@@ -43,13 +42,12 @@
             </tr>
         </table>
     </div>
-            <div class="reset">
-            <br/>
-            <button class="button" onclick="gameModule.resetGame();">Reset game</button>
-        </div>
+
     <div class="startSymbol">
-        <button class="button" onclick="gameModule.startGame(circle);">Circle starts</button>
-        <button class="button" onclick="gameModule.startGame(cross);">Cross starts</button>
+        <button class="button" onclick="gameModule.resetGame();">Reset game</button>
+        <button class="button" onclick="gameModule.startGame(circle);">New game (Circle starts)</button>
+        <button class="button" onclick="gameModule.startGame(cross);">New game (Cross starts)</button>
+         <button class="button" onclick="gameModule.changeStarting();">Switch starting</button>
     </div>
     <script src="game.js"></script>
     <script src="winner-checker.js"></script>

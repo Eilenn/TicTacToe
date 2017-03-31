@@ -44,25 +44,21 @@ h1{
     text-align: center;
 }
 #st1{
-    float: left;
-
+    float: left;  
 }
 
 #st2{
-    float: left;
+    float: left;  
 }
 #st3{
-    float: left;
+    float: left;  
 }
 .stats{
     width: 200px;
     font-size: 18pt;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
-   
+    text-align: center; 
 }
-
-
 table{
     font-size: 45pt;
     border: 1px solid black;
