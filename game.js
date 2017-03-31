@@ -3,8 +3,6 @@ var gameModule = (function () {
         document.symbol = symbol;
         // to be able to reset game with starting symbol
         starting = symbol;
-        // 1 means X
-        whoFirst=1;
         messagesModule.setMessage(symbol+" starts");
         winner = false;
         moveCounter = 0;
@@ -15,12 +13,13 @@ var gameModule = (function () {
     },
     _changeStarting = function(){
         if(starting=='X'){
-            whoFirst=0;
             starting=circle;
         }
         else{
-            whoFirst=1;
             starting=cross;
+        }
+        if(moveCounter==0){
+            _resetGame();
         }
     },
         _switchSymbol = function () {
