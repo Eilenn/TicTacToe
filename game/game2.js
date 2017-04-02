@@ -9,7 +9,7 @@ var gameModule2 = (function () {
         clear.clearBoard();
         size =3;
        winnerChecker2.createBoard(size);
-    }
+    },
     _resetGame = function () {
         _startGame(starting);
     },
@@ -20,7 +20,7 @@ var gameModule2 = (function () {
         else{
             starting=cross;
         }
-        if(moveCounter==0){
+        if(moveCounter===0){
             _resetGame();
         }
     },
@@ -48,7 +48,7 @@ var gameModule2 = (function () {
             }
         },
         _nextMove = function (cell) {
-            if (cell.innerText == '' && winner == false && moveCounter != 9) {
+            if (cell.innerText === '' && winner === false && moveCounter !== (size*size)) {
                 cell.innerText = document.symbol;
                 if (checkSymbolModule.isX(cell)) {
                     cell.style.color = "#191970";
@@ -60,13 +60,13 @@ var gameModule2 = (function () {
                 }
                 _switchSymbol();
                 moveCounter++;
-                if (winnerChecker2.isDraw(moveCounter) && winner == false) {
+                if (winnerChecker2.isDraw(moveCounter) && winner === false) {
                     historyModule.wasDraw();
                     messagesModule.setDraw(historyModule.getTimesWasDraw());
                     alert('Game over. It is a tie.');
                 }
             }
-            else if (cell.innerText == '' && winner == true) {
+            else if (cell.innerText === '' && winner === true) {
                 alert("Game over,  you cannot place symbol on board.");
             }
             else {
@@ -78,5 +78,5 @@ var gameModule2 = (function () {
         resetGame: _resetGame,
         nextMove: _nextMove,
         changeStarting: _changeStarting
-    }
+    };
 })();

@@ -5,6 +5,7 @@ var winnerChecker2 = (function () {
         for (var i = 0; i < board.length; i++) {
             board[i] = 0;
         }
+        return board;
     },
         _splitIntoRows = function () {
             rows = new Array(size);
@@ -114,6 +115,9 @@ var winnerChecker2 = (function () {
     ;
     return {
         createBoard: _createBoard,
+        checkRows: _checkRows,
+        checkColumns: _checkColumns,
+        checkDiagonals: _checkDiagonals,
         hasWonGame: _hasWonGame,
         isDraw: _isDraw
     }
