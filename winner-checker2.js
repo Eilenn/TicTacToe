@@ -53,6 +53,7 @@ var winnerChecker2 = (function () {
             }
         },
         _checkRows = function () {
+            _splitIntoRows();
             var hasWon = false;
             for (var i = 0; i < size; i++) {
                 var sum = 0;
@@ -67,6 +68,7 @@ var winnerChecker2 = (function () {
             return hasWon;
         },
         _checkColumns = function () {
+            _splitIntoColumns();
             var hasWon = false;
             for (var i = 0; i < size; i++) {
                 var sum = 0;
@@ -81,6 +83,7 @@ var winnerChecker2 = (function () {
             return hasWon;
         },
         _checkDiagonals = function () {
+            _splitInDiagonals();
             var hasWon = false;
             for (var i = 0; i < 2; i++) {
                 var sum = 0;
@@ -94,18 +97,24 @@ var winnerChecker2 = (function () {
             }
             return hasWon;
         },
-        _checkWinRow = function () {
-            _splitIntoRows();
-            _splitIntoColumns();
-            _splitInDiagonals();
-            _checkRows();
-            _checkColumns();
-             _checkDiagonals();
-        }
-        ;
+        _hasWonGame = function () {
+            var hasWon = false;
+            if (_checkRows() || _checkColumns() || _checkDiagonals()) {
+                hasWon = true;
+            }
+            return hasWon;
+        },
+        _isDraw = function (moveCounter) {
+            var draw = false;
+            if (moveCounter == (size*size)) {
+                draw = true;
+            }
+            return draw;
+        };
+    ;
     return {
         createBoard: _createBoard,
-        splitIntoRows: _splitIntoRows,
-        checkWinRow: _checkWinRow
+        hasWonGame: _hasWonGame,
+        isDraw: _isDraw
     }
 })();

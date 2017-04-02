@@ -1,4 +1,4 @@
-var gameModule = (function () {
+var gameModule2 = (function () {
     var _startGame = function (symbol) {
         document.symbol = symbol;
         // to be able to reset game with starting symbol
@@ -14,7 +14,7 @@ var gameModule = (function () {
         _startGame(starting);
     },
     _changeStarting = function(){
-        if(starting=='X'){
+        if(starting==cross){
             starting=circle;
         }
         else{
@@ -25,7 +25,7 @@ var gameModule = (function () {
         }
     },
         _switchSymbol = function () {
-            if (winnerChecker.isWon(document.symbol)) {
+            if (winnerChecker2.hasWonGame()) {
                 winner = true;
                 if (checkSymbolModule.isSymbolX()) {
                     historyModule.xWon();
@@ -38,12 +38,12 @@ var gameModule = (function () {
                 alert(document.symbol + ', you won!');
             }
 
-            else if (document.symbol == 'X') {
-                document.symbol = 'O';
+            else if (document.symbol == cross) {
+                document.symbol = circle;
                 messagesModule.setMessage(document.symbol + ' turn');
             }
             else {
-                document.symbol = 'X';
+                document.symbol = cross;
                 messagesModule.setMessage(document.symbol + ' turn');
             }
         },
@@ -58,10 +58,9 @@ var gameModule = (function () {
                     cell.style.color = "red";
                     board[cell.id-1]=-1;
                 }
-                winnerChecker2.checkWinRow();
                 _switchSymbol();
                 moveCounter++;
-                if (winnerChecker.isDraw(moveCounter) && winner == false) {
+                if (winnerChecker2.isDraw(moveCounter) && winner == false) {
                     historyModule.wasDraw();
                     messagesModule.setDraw(historyModule.getTimesWasDraw());
                     alert('Game over. It is a tie.');

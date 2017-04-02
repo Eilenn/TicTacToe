@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body onload="gameModule.startGame(cross)">
+<body onload="gameModule2.startGame(cross)">
     <div class="pageHeader">
         <h1>Tic Tac Toe Game</h1>
     </div>
@@ -26,29 +26,28 @@
     <div class="container">
         <table class="center">
             <tr>
-                <td class="Cell" id="1" onclick="gameModule.nextMove(this)"></td>
-                <td class="Cell" id="2" onclick="gameModule.nextMove(this)"></td>
-                <td class="Cell" id="3" onclick="gameModule.nextMove(this)"></td>
+                <td class="Cell" id="1" onclick="gameModule2.nextMove(this)"></td>
+                <td class="Cell" id="2" onclick="gameModule2.nextMove(this)"></td>
+                <td class="Cell" id="3" onclick="gameModule2.nextMove(this)"></td>
             </tr>
             <tr>
-                <td class="Cell" id="4" onclick="gameModule.nextMove(this)"></td>
-                <td class="Cell" id="5" onclick="gameModule.nextMove(this)"></td>
-                <td class="Cell" id="6" onclick="gameModule.nextMove(this)"></td>
+                <td class="Cell" id="4" onclick="gameModule2.nextMove(this)"></td>
+                <td class="Cell" id="5" onclick="gameModule2.nextMove(this)"></td>
+                <td class="Cell" id="6" onclick="gameModule2.nextMove(this)"></td>
             </tr>
             <tr>
-                <td class="Cell" id="7" onclick="gameModule.nextMove(this)"></td>
-                <td class="Cell" id="8" onclick="gameModule.nextMove(this)"></td>
-                <td class="Cell" id="9" onclick="gameModule.nextMove(this)"></td>
+                <td class="Cell" id="7" onclick="gameModule2.nextMove(this)"></td>
+                <td class="Cell" id="8" onclick="gameModule2.nextMove(this)"></td>
+                <td class="Cell" id="9" onclick="gameModule2.nextMove(this)"></td>
             </tr>
         </table>
     </div>
 
     <div class="startSymbol">
-        <button class="button" onclick="gameModule.resetGame();">New game</button>
-        <button class="button" onclick="gameModule.changeStarting();">Switch starting symbol</button>
+        <button class="button" onclick="gameModule2.resetGame();">New game</button>
+        <button class="button" onclick="gameModule2.changeStarting();">Switch starting symbol</button>
     </div>
-    <script src="game.js"></script>
-    <script src="winner-checker.js"></script>
+    <script src="game2.js"></script>
     <script src="clear.js"></script>
     <script src="startingSymbol.js"></script>
     <script src="history.js"></script>

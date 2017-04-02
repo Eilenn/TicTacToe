@@ -8,13 +8,12 @@ var gameModule = (function () {
         moveCounter = 0;
         clear.clearBoard();
         size =3;
-       winnerChecker2.createBoard(size);
     }
     _resetGame = function () {
         _startGame(starting);
     },
     _changeStarting = function(){
-        if(starting=='X'){
+        if(starting==cross){
             starting=circle;
         }
         else{
@@ -38,27 +37,24 @@ var gameModule = (function () {
                 alert(document.symbol + ', you won!');
             }
 
-            else if (document.symbol == 'X') {
-                document.symbol = 'O';
+            else if (document.symbol == cross) {
+                document.symbol = circle;
                 messagesModule.setMessage(document.symbol + ' turn');
             }
             else {
-                document.symbol = 'X';
+                document.symbol = cross;
                 messagesModule.setMessage(document.symbol + ' turn');
             }
         },
         _nextMove = function (cell) {
-            if (cell.innerText == '' && winner == false && moveCounter != 9) {
+            if (cell.innerText == '' && winner == false && moveCounter != (size*size)) {
                 cell.innerText = document.symbol;
                 if (checkSymbolModule.isX(cell)) {
                     cell.style.color = "#191970";
-                    board[cell.id-1]=1;
                 }
                 if (checkSymbolModule.isO(cell)) {
                     cell.style.color = "red";
-                    board[cell.id-1]=-1;
                 }
-                winnerChecker2.checkWinRow();
                 _switchSymbol();
                 moveCounter++;
                 if (winnerChecker.isDraw(moveCounter) && winner == false) {
