@@ -115,9 +115,6 @@ var winnerChecker2 = (function () {
     ;
     return {
         createBoard: _createBoard,
-        checkRows: _checkRows,
-        checkColumns: _checkColumns,
-        checkDiagonals: _checkDiagonals,
         hasWonGame: _hasWonGame,
         isDraw: _isDraw
     }
