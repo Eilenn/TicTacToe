@@ -1,4 +1,8 @@
 describe('game tests', function() {
+    beforeEach(function(){
+        size=3;
+        board=[0,0,0,0,0,0,0,0,0];
+    });
   it('changes starting symbol from cross to circle in the middle of game', function() {
        starting=cross;
        moveCounter=1;
@@ -23,5 +27,26 @@ describe('game tests', function() {
       spyOn(gameModule2,'startGame');
       gameModule2.resetGame();
       expect(gameModule2.startGame).toHaveBeenCalledWith(cross);
+  }),
+   it('alert for game over',function(){
+         var cell=document.createElement("td"),
+         moveCounter=5;
+         cell.id=2;
+         cell.innerText='';
+         winner=true;
+         document.getElementById= jasmine.createSpy('HTML Element').and.returnValue(cell);
+         spyOn(window, 'alert');
+         gameModule2.nextMove(cell);
+         expect(window.alert).toHaveBeenCalledWith("Game over,  you cannot place symbol on board.");
+  }),
+     it('message for disallowed move - clicking on occupied field',function(){
+         var cell=document.createElement("td"),
+         moveCounter=5;
+         cell.id=2;
+         cell.innerText='X';
+         document.getElementById= jasmine.createSpy('HTML Element').and.returnValue(cell);
+         spyOn(messagesModule, 'setMessage');
+         gameModule2.nextMove(cell);
+         expect(messagesModule.setMessage).toHaveBeenCalledWith("This field is occupied. Pick another.");
   });
 });
