@@ -66,7 +66,7 @@ var gameModule2 = (function () {
                     alert('Game over. It is a tie.');
                 }
             }
-            else if (cell.innerText === '' && winner === true) {
+            else if (winner === true) {
                 alert("Game over,  you cannot place symbol on board.");
             }
             else {
