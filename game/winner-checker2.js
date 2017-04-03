@@ -7,7 +7,7 @@ var winnerChecker2 = (function () {
         }
         return board;
     },
-        _splitIntoRows = function () {
+        _splitIntoRows = function (size) {
             rows = new Array(size);
             for (var i = 0; i < size; i++) {
                 rows[i] = new Array(size);
@@ -22,7 +22,7 @@ var winnerChecker2 = (function () {
                 start = j;
             }
         },
-        _splitIntoColumns = function () {
+        _splitIntoColumns = function (size) {
             columns = new Array(size);
             for (var i = 0; i < size; i++) {
                 columns[i] = new Array(size);
@@ -37,7 +37,7 @@ var winnerChecker2 = (function () {
                 start++;
             }
         },
-        _splitInDiagonals = function () {
+        _splitInDiagonals = function (size) {
             diagonals = new Array(2);
             diagonals[0] = new Array(size);
             diagonals[1] = new Array(size);
@@ -53,8 +53,8 @@ var winnerChecker2 = (function () {
                 index2++;
             }
         },
-        _checkRows = function () {
-            _splitIntoRows();
+        _checkRows = function (size) {
+            _splitIntoRows(size);
             var hasWon = false;
             for (var i = 0; i < size; i++) {
                 var sum = 0;
@@ -68,8 +68,8 @@ var winnerChecker2 = (function () {
             }
             return hasWon;
         },
-        _checkColumns = function () {
-            _splitIntoColumns();
+        _checkColumns = function (size) {
+            _splitIntoColumns(size);
             var hasWon = false;
             for (var i = 0; i < size; i++) {
                 var sum = 0;
@@ -83,8 +83,8 @@ var winnerChecker2 = (function () {
             }
             return hasWon;
         },
-        _checkDiagonals = function () {
-            _splitInDiagonals();
+        _checkDiagonals = function (size) {
+            _splitInDiagonals(size);
             var hasWon = false;
             for (var i = 0; i < 2; i++) {
                 var sum = 0;
@@ -100,7 +100,7 @@ var winnerChecker2 = (function () {
         },
         _hasWonGame = function () {
             var hasWon = false;
-            if (_checkRows() || _checkColumns() || _checkDiagonals()) {
+            if (_checkRows(size) || _checkColumns(size) || _checkDiagonals(size)) {
                 hasWon = true;
             }
             return hasWon;
