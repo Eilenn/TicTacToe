@@ -11,7 +11,7 @@ var gameModule2 = (function () {
        winnerChecker2.createBoard(size);
     },
     _resetGame = function () {
-        _startGame(starting);
+        this.startGame(starting);
     },
     _changeStarting = function(){
         if(starting==cross){
@@ -21,7 +21,7 @@ var gameModule2 = (function () {
             starting=cross;
         }
         if(moveCounter===0){
-            _resetGame();
+            this.resetGame();
         }
     },
         _switchSymbol = function () {
